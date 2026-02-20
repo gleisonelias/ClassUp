@@ -10,6 +10,7 @@ Este repositório contém uma interface inicial da plataforma com dois fluxos de
 - `publish-to-github.sh`
 - `publish-to-github.ps1`
 - `publish-main-and-work.sh`
+- `sync-work-main-local.sh`
 - `README.md`
 
 ## Rodar localmente
@@ -59,6 +60,17 @@ Se quiser validar rapidamente se este clone tem os arquivos corretos e se o `ori
 
 Esse script mostra branch atual, commits locais, arquivos versionados e referências remotas.
 
+
+
+## Sincronizar arquivos localmente entre `work` e `main`
+
+Para garantir que os dois branches locais apontem para o mesmo commit com todos os arquivos:
+
+```bash
+./sync-work-main-local.sh
+```
+
+Esse script valida os arquivos essenciais e atualiza o branch local `main` para o mesmo commit do branch atual (normalmente `work`).
 
 ## Publicar o mesmo conteúdo em `main` e `work`
 
