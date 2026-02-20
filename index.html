@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassUp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>ClassUp</h1>
+        <p class="subtitle">Selecione uma opção para continuar</p>
+
+        <div class="actions">
+          <a class="btn btn-secondary" href="login.html">Login (somente administrador)</a>
+          <button id="startScanBtn" class="btn btn-primary">Ler QRCode</button>
+        </div>
+
+        <section id="scannerSection" class="scanner hidden" aria-live="polite">
+          <p id="scannerStatus">Aponte a câmera para o QRCode do aluno.</p>
+          <video id="video" playsinline></video>
+          <button id="stopScanBtn" class="btn btn-danger">Parar leitura</button>
+        </section>
+
+        <p id="result" class="result" hidden></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

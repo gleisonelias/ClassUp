@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do aluno | ClassUp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Perfil do aluno</h1>
+        <p class="subtitle">Acesso liberado através do QRCode.</p>
+        <p id="codigo" class="result"></p>
+        <a class="btn btn-secondary" href="index.html">Voltar para início</a>
+      </section>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const codigo = params.get('codigo');
+      document.getElementById('codigo').textContent = codigo
+        ? `Código lido: ${codigo}`
+        : 'Nenhum código foi informado.';
+    </script>
+  </body>
+</html>
