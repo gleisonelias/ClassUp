@@ -1,12 +1,12 @@
 # ClassUp
 
-Este repositório contém o código-fonte mínimo da plataforma em arquivos estáticos.
+Este repositório contém uma interface inicial da plataforma com dois fluxos de acesso: professor por login e aluno por QR Code + código.
 
 ## Arquivos incluídos
 
-- `index.html`
-- `styles.css`
-- `script.js`
+- `index.html` (página inicial com acesso de professor e aluno)
+- `styles.css` (estilo da interface de login/QR Code)
+- `script.js` (interações de login e leitura de código de aluno)
 - `publish-to-github.sh`
 - `publish-to-github.ps1`
 - `publish-main-and-work.sh`

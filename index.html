@@ -3,42 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClassUp | Plataforma</title>
+    <title>ClassUp | Acesso</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="container">
-      <section id="welcomeCard" class="card">
-        <p class="badge">ClassUp • versão para publicar no main</p>
-        <h1>Bem-vindo à plataforma</h1>
-        <p>
-          Base inicial com código-fonte completo da interface, pronta para subir no
-          GitHub e servir como ponto de partida da plataforma.
-        </p>
-        <button id="accessButton" class="primary">Entrar na plataforma</button>
-        <p id="status" class="status" aria-live="polite"></p>
+      <section class="card hero">
+        <h1>ClassUp</h1>
+        <p>Bem-vindo! Escolha como deseja entrar na plataforma.</p>
       </section>
 
-      <section id="dashboard" class="card dashboard hidden" aria-live="polite">
-        <div class="dashboard-header">
-          <h2>Painel da turma — 3º Ano A</h2>
-          <span id="lastAccess" class="last-access"></span>
-        </div>
+      <section class="access-grid">
+        <article class="card access-card">
+          <h2>Acesso do Professor</h2>
+          <p>Entre com e-mail e senha para acessar o painel da turma.</p>
+          <form id="teacherLoginForm" class="form">
+            <label>
+              E-mail
+              <input id="teacherEmail" type="email" required placeholder="professor@escola.com" />
+            </label>
+            <label>
+              Senha
+              <input id="teacherPassword" type="password" required placeholder="••••••••" />
+            </label>
+            <button type="submit" class="primary">Entrar como professor</button>
+          </form>
+        </article>
 
-        <div class="grid">
-          <article class="tile">
-            <h3>Próxima aula</h3>
-            <p>Matemática • Hoje às 19:00</p>
-          </article>
-          <article class="tile">
-            <h3>Tarefas pendentes</h3>
-            <p>2 atividades para entregar até sexta-feira.</p>
-          </article>
-          <article class="tile">
-            <h3>Recados</h3>
-            <p>Reunião com responsáveis na próxima semana.</p>
-          </article>
-        </div>
+        <article class="card access-card">
+          <h2>Acesso do Aluno</h2>
+          <p>Escaneie o QR Code para capturar o código e entrar no perfil.</p>
+          <div class="qr-box" aria-label="Área de leitura de QR Code">
+            <p>QR Code da turma</p>
+            <button id="scanQrButton" class="secondary" type="button">Escanear QR Code</button>
+          </div>
+          <form id="studentCodeForm" class="form compact">
+            <label>
+              Código do aluno
+              <input id="studentCode" type="text" required placeholder="Ex: ALUNO-3A-045" />
+            </label>
+            <button type="submit" class="primary">Entrar como aluno</button>
+          </form>
+        </article>
+      </section>
+
+      <section id="resultPanel" class="card result hidden" aria-live="polite">
+        <h2 id="resultTitle"></h2>
+        <p id="resultDescription"></p>
       </section>
     </main>
 
