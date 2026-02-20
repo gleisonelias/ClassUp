@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassUp | Plataforma</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section id="welcomeCard" class="card">
+        <p class="badge">ClassUp • versão para publicar no main</p>
+        <h1>Bem-vindo à plataforma</h1>
+        <p>
+          Base inicial com código-fonte completo da interface, pronta para subir no
+          GitHub e servir como ponto de partida da plataforma.
+        </p>
+        <button id="accessButton" class="primary">Entrar na plataforma</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section id="dashboard" class="card dashboard hidden" aria-live="polite">
+        <div class="dashboard-header">
+          <h2>Painel da turma — 3º Ano A</h2>
+          <span id="lastAccess" class="last-access"></span>
+        </div>
+
+        <div class="grid">
+          <article class="tile">
+            <h3>Próxima aula</h3>
+            <p>Matemática • Hoje às 19:00</p>
+          </article>
+          <article class="tile">
+            <h3>Tarefas pendentes</h3>
+            <p>2 atividades para entregar até sexta-feira.</p>
+          </article>
+          <article class="tile">
+            <h3>Recados</h3>
+            <p>Reunião com responsáveis na próxima semana.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
